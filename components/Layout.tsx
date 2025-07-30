@@ -14,7 +14,7 @@ export default function Layout({ children, currentPage }: LayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false)
 
   return (
-    <div className="flex h-screen bg-slate-50">
+    <div className="flex h-screen bg-gradient-to-br from-slate-100 via-blue-50 to-indigo-100">
       {/* Sidebar */}
       <Sidebar currentPage={currentPage} isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 
@@ -24,7 +24,7 @@ export default function Layout({ children, currentPage }: LayoutProps) {
         <Topbar onMenuClick={() => setSidebarOpen(true)} />
 
         {/* Main Content */}
-        <main className="flex-1 overflow-auto bg-white">{children}</main>
+        <main className="flex-1 overflow-auto">{children}</main>
       </div>
 
       {/* Mobile Overlay */}

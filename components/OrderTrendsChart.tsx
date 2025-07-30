@@ -14,11 +14,14 @@ export default function OrderTrendsChart() {
   const range = maxValue - minValue
 
   return (
-    <Card className="w-full">
+    <Card className="w-full bg-white/90 backdrop-blur-sm border-slate-200/60 shadow-lg">
       <CardHeader>
-        <CardTitle className="text-lg font-semibold text-slate-900">Order Trends</CardTitle>
+        <CardTitle className="text-lg font-semibold text-slate-900 flex items-center gap-2">
+          <div className="w-2 h-8 bg-gradient-to-b from-blue-500 to-blue-600 rounded-full"></div>
+          Order Trends
+        </CardTitle>
         <CardDescription className="text-sm text-slate-600">
-          Monthly order volume over the past year
+          Monthly order volume over the past year - showing steady growth
         </CardDescription>
       </CardHeader>
       <CardContent>
